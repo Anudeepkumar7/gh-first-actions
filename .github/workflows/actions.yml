@@ -16,9 +16,9 @@ jobs:
           echo "good afterroon running on single step of both echo commands"
           echo "----checking the present working directory----"
           pwd
-          ls
+          echo "---listing files----"
+          ls -larth
           
-
   second-job:
     runs-on: ubuntu-slim
     steps:
