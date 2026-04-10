@@ -13,6 +13,8 @@ jobs:
         run: | 
           echo "hello clone repos step"
           echo "good afterroon running on single step of both echo commands"
+          echo "----checking the present working directory----"
+          pwd
 
   second-job:
     runs-on: ubuntu-slim
