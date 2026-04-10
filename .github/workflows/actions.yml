@@ -26,7 +26,8 @@ jobs:
         run: | 
           echo "---checking the java and python versions----"
           python --version
-          java --version
+          chmod +x version.sh
+          ./version.sh
           
   second-job:
     runs-on: ubuntu-slim
