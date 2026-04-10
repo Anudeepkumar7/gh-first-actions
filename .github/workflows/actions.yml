@@ -30,6 +30,7 @@ jobs:
           ./version.sh
           
   second-job:
+    needs: setup
     runs-on: ubuntu-slim
     steps:
       - name: second-stage
