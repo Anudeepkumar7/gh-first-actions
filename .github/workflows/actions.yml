@@ -10,6 +10,9 @@ jobs:
     runs-on: ubuntu-slim
     steps:
       - name: clone-repo
+        uses: actions/checkout@v4
+
+      - name: basic-step
         run: | 
           #!/bin/bash
           echo "hello clone repos step"
@@ -18,6 +21,12 @@ jobs:
           pwd
           echo "---listing files----"
           ls -larth
+
+      - name: listing-packages
+        run: | 
+          echo "---checking the java and python versions----"
+          python --version
+          java --version
           
   second-job:
     runs-on: ubuntu-slim
