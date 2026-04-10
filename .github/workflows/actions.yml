@@ -28,6 +28,11 @@ jobs:
           python --version
           chmod +x version.sh
           ./version.sh
+
+      - name: setup-node
+        uses: actions/setup-node@v6
+        with:
+          node-version: '24'
           
   second-job:
     needs: setup
@@ -35,3 +40,7 @@ jobs:
     steps:
       - name: second-stage
         run: echo "hello second-stage"
+      - name: node-serup
+        uses: actions/setup-node@v6
+        with:
+          node-version: '24'
