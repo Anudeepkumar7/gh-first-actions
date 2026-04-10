@@ -11,10 +11,13 @@ jobs:
     steps:
       - name: clone-repo
         run: | 
+          #!/bin/bash
           echo "hello clone repos step"
           echo "good afterroon running on single step of both echo commands"
           echo "----checking the present working directory----"
           pwd
+          ls
+          
 
   second-job:
     runs-on: ubuntu-slim
